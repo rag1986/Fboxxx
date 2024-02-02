@@ -1,0 +1,363 @@
+@import "../../../variables";
+
+.benefits_row {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+&::after{
+    position: absolute;
+    width: 100%;
+    background: $yellow-color;
+    content: '';
+    height: 300px;
+    top: 0;
+    z-index: 0;
+}
+    .benefits_section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $clamp-120-50;
+        background-color: $black-color;
+         position: relative;
+         z-index: 1;
+         padding: clamp(3.125rem, 0.8929rem + 7.1429vw, 6.25rem) ;
+         border-radius: 20px;
+         @media screen and (max-width:700px) {
+            padding: 0px
+         }
+        .benefits_box {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            .benefits_cont {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .img-row {
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .benefits_text {
+                    width: 45%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 15px;
+                    h3 {
+                        color: $white-color;
+                        font-size: $clamp-50-25;
+                        font-weight: 600;
+                        line-height: $clamp-60-30;
+                    }
+                    p {
+                        color: $white-color;
+                        font-size: $clamp-16-14;
+                        font-weight: 400;
+                    }
+                }
+            }
+            @media screen and (max-width:700px) {
+                padding: 30px;
+            }
+        }
+        .easy_steps {
+            background: #1f1e1e;
+            border-radius: 60px;
+            padding: 60px 60px 40px 60px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            h3 {
+                font-size: $clamp-30-24;
+                color: $white-color;
+                font-weight: 600;
+            }
+            .steper_row {
+                width: 100%;
+                .stepper {
+                    padding: 40px 0 0 0;
+                    font-size: 13px;
+                }
+                @media (min-width: 48em) {
+                    .stepper {
+                        padding: 20px 0 0 0;
+                    }
+                }
+                .stepper__list {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+                @media (min-width: 48em) {
+                    .stepper__list {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                .stepper__list__item {
+                    padding: 3px 5px;
+                    text-align: center;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                }
+                @media (min-width: 48em) {
+                    .stepper__list__item {
+                        padding: 10px;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                }
+                .stepper__list__item:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    z-index: 2;
+                }
+                @media (min-width: 48em) {
+                    .stepper__list__item:after {
+                        width: calc(100% - 100px);
+                        top: 20%;
+                        left: calc(50% + 50px);
+                        background: url(../../../assets/images/arrow.svg) no-repeat;
+                        background-position: center 0px;
+                        background-size: contain;
+                    }
+                }
+
+                @media (max-width: 48em) {
+                    .stepper__list__item:after {
+                        width: calc(100% - 100px);
+                        top: 20%;
+                        left: calc(50% + 50px);
+                        background: url(../../../assets/images/btmarrow.svg) no-repeat;
+                        background-position: center 0px;
+                        background-size: contain; 
+                    }
+                }
+
+                .stepper__list__item:last-of-type:after {
+                    display: none;
+                }
+                .stepper__list__item--pending {
+                    color: #807370;
+                    .stepper_box {
+                        width: 55px;
+                        height: 55px;
+                        background: #ffdd15;
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $black-color;
+                        font-size: 25px;
+                    }
+                }
+                .stepper__list__item--pending:after {
+                    height: 30%;
+                }
+                .stepper__list__title {
+                    margin: 5px 0 0 0;
+                    font-size: $clamp-18-16;
+                    color: $white-color;
+                }
+                @media (min-width: 48em) {
+                    .stepper__list__title {
+                        margin: 5px 0 0 0;
+                    }
+                }
+                .stepper__list__icon {
+                    margin: 0 10px 0 0;
+                    height: 2em;
+                    width: 2em;
+                }
+                @media (min-width: 48em) {
+                    .stepper__list__icon {
+                        margin: 0 0 15px;
+                    }
+                }
+                .stepper__list__icon path {
+                    fill: currentColor;
+                }
+                .stepper__list__icon ellipse,
+                .stepper__list__icon circle {
+                    stroke: currentColor;
+                }
+            }
+        }
+        .btm_steps {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h3 {
+                font-size: $clamp-40-24;
+                color: $yellow-color;
+            }
+            .btm_steps_box {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 50px;
+                .steps_box {
+                    width: 48%;
+                    background: #1f1e1e;
+                    padding: 50px;
+                    border-radius: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    .left {
+                        display: flex;
+                        flex-direction: column;
+                        width: 70%;
+                        h3 {
+                            font-size: $clamp-50-25;
+                            color: $white-color;
+                            font-weight: 600;
+                            line-height: $clamp-60-30;
+                        }
+                        p {
+                            font-size: $clamp-20-17;
+                            color: $white-color;
+                        }
+                    }
+                    .right{
+                        width: 30%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+      
+    }
+}
+
+@media screen and (max-width:880px) {
+    .benefits_row{
+        .benefits_section {
+            .btm_steps {
+                .btm_steps_box{
+                    flex-direction: column;
+                    gap: 30px;
+                    .steps_box{
+                        width: 100%;
+                        padding: 30px;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:760px) {
+    .benefits_row{
+        .benefits_section{
+            .easy_steps{
+                padding: 20px;
+                align-items: center;
+                border-radius: 13px;
+                .steper_row{
+                    .stepper{
+                        padding: 16px 0 0 0;
+                        .stepper__list{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                           .stepper__list__item{
+                            gap: 15px;
+                            flex-direction: column;
+                            padding-bottom: 60px;
+                            .stepper__list__title{
+                                text-align: left;
+                                text-align: center;
+                            }
+                           } 
+                        }
+                    }
+                    .stepper__list__item--pending:after {
+                        height: 40px;
+                        width: 40px;
+                        bottom: 0;
+                        left: auto;
+                        top: auto; 
+                    }
+                }
+            }
+            .btm_steps {
+                .btm_steps_box{
+                    padding-top: 30px;
+                    .steps_box{
+                        border-radius: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+.benefits_row {
+    padding-top: 0;
+    .benefits_section{
+        .btm_steps{
+            h3{
+                text-align: center;
+            }
+        }
+        .benefits_box {
+            .benefits_cont{
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                flex-direction: column-reverse;
+                .img-row{
+                    order: 1;
+                    text-align: center;
+                    align-items: center;
+                    width: 80%;
+                }
+            
+                .benefits_text{
+                    order: 2;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+}
+
+
+
+@media screen and (max-width:420px) {
+    .benefits_row {
+        .benefits_section{
+            .benefits_box {
+                gap: 50px;
+                .benefits_cont{
+                    .img-row{
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+    
+    }

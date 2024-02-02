@@ -1,0 +1,72 @@
+@import "../../../../src/variables";
+
+.otp-info{
+    width: 100%;
+    .otp-info-row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .otp-icon{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .otp-right{
+            width: 50%;
+            padding-right: 100px;
+            h2{
+                font-size: $clamp-50-25;
+                color: $white-color;
+                font-weight: 600;
+                line-height: $clamp-60-30;
+            }
+            .otp-row{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-top: 50px;
+               .info-msg{
+                width: 100%;
+                padding-bottom: 10px;
+                p{
+                    color: #fff;
+                    font-size: 12px;
+                    a{
+                     color: #FFDD15;
+                    } 
+                 }
+               }
+
+             
+
+               .otpfields{
+                width: 100%;
+                display: flex;
+                gap: 30px;
+               }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .otp-info {
+        .otp-info-row{
+            flex-direction: column;
+            gap: 50px;
+            .otp-icon{
+                width: 100%;
+            }
+            .otp-right{
+                width: 100%;
+                padding-right: 0px;
+                .otp-info-row{
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+

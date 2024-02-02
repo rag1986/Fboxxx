@@ -1,0 +1,40 @@
+
+@import "../../../variables";
+
+.explore-section{
+    width: 100%;
+    .explore-row{
+        background: url(../../../assets/images/bg.svg) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        border-radius: 40px;
+        overflow: hidden;
+        padding: $clamp-96-24 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 30px;
+        h2{
+            font-size: $clamp-60-30;
+            color: $white-color;
+            display: block;
+            font-weight: 500;
+line-height: $clamp-70-40;
+        }
+        .exp-btn{
+         background-color: $black-color;
+         color: $white-color;
+         font-size: $clamp-16-14;
+         text-transform: uppercase;
+         padding: 20px 50px;
+         border-radius: 50px;
+         text-decoration: none;
+         &:hover{
+            background: #FFDD15;
+            color: #000;
+         }
+        }
+    }
+}

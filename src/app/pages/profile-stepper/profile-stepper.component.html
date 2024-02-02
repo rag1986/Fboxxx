@@ -1,0 +1,22 @@
+<section class="pro-step-container">
+
+  <div [ngTemplateOutlet]="selected ? selected.content : null"></div>
+
+
+  <div class="profile-right">
+    <footer class="pro-step-navigation-bar">
+      <!-- <button mat-raised-button color="primary" class="" >Next</button> -->
+
+      <button  class="next-btn" cdkStepperNext>NEXT</button>
+
+
+
+      <h2> <span class="active">{{ selectedIndex + 1 }}</span> / {{ steps.length }}</h2>
+    </footer>
+
+  </div>
+  </section>
+  
+
+
+  

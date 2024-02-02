@@ -1,0 +1,79 @@
+@import "../../../../src/variables";
+
+.profile-info {
+    width: 100%;
+    .profile-info-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .profile-icon {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .profile-right {
+            width: 50%;
+            padding-right: 100px;
+            h2 {
+                font-size: $clamp-50-25;
+                color: $white-color;
+                font-weight: 600;
+                line-height: $clamp-60-30;
+            }
+            .profile-row {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-top: 50px;
+                .info-msg {
+                    width: 100%;
+                    padding-bottom: 10px;
+                    p {
+                        color: #fff;
+                        font-size: 12px;
+                        a {
+                            color: #ffdd15;
+                        }
+                    }
+                }
+
+                .field-footer {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 30px;
+                    padding-top: 20px;
+                    .right {
+                        font-size: 18px;
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+            }
+            @media screen and (max-width: 1000px) {
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profile-info {
+        .profile-info-row {
+            flex-direction: column;
+            gap: 50px;
+            .profile-icon{
+                width: 100%;
+            }
+            .profile-right{
+                width: 100%;
+                padding-right: 0px;
+                .profile-row{
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 10px 0;
+    .logo{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        @media screen and (max-width:700px) {
+            width: 83px
+        }
+    }
+    .right-nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        .r_button{
+            color: #FFDD15;
+            border: 1px solid #FFDD15;
+            border-radius: 50px;
+            padding: 11px 33px;
+            text-decoration: none;
+            @media screen and (max-width:700px) {
+                padding: 4px 16px;
+                font-size: 13px;
+            }
+            &:hover{
+                background: #FFDD15;
+                color: #000;
+            }
+        }
+        @media screen and (max-width:700px) {
+            gap: 20px;  
+        }
+        .menu{
+            cursor: pointer;
+        }
+    }
+}

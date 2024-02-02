@@ -1,0 +1,13 @@
+
+.innerpage_header{
+    background: #171717;
+}
+
+.create-profile{
+    width: 100%;
+    padding: 100px 0;
+    background: #171717;
+    @media screen and (max-width: 800px) {
+    padding: 40px 0;
+    }
+}

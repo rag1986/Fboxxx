@@ -1,0 +1,124 @@
+@import "../../../../src/variables";
+
+.profile-pic-info{
+    width: 100%;
+    .profile-pic-info-row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .profile-pic-icon{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .profile-pic-right{
+            width: 50%;
+            padding-right: 100px;
+            h2{
+                font-size: $clamp-50-25;
+                color: $white-color;
+                font-weight: 600;
+                line-height: $clamp-60-30;
+            }
+            .profile-pic-row{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-top: 50px;
+              
+                .uesr-profile-pic-row{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 50px;
+                    align-items: center;
+                    .profie-photo{
+                        width: 124px;
+                        height: 124px;
+                        border-radius: 200px;
+                        overflow: hidden;
+                    }
+                    .profie-photo-upload{
+                        display: flex;
+                        flex-direction: column;
+                        width: calc(100% - 124px);
+                        gap: 30px;
+                        .photo-link{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            color: $white-color;
+                            border-bottom: 1px solid #D9D9D9;
+                            padding-bottom: 15px;
+                            cursor: pointer;
+                            font-size: 16px;
+                            span{
+                                path{
+                                    stroke: $white-color ;
+                                    fill: none;
+                                }
+                            }
+                            &:hover{
+                                color: $yellow-color;
+                                border-color: $yellow-color;
+                                span{
+                                path{
+                                    stroke: $yellow-color;
+                                    fill: none;
+                                }
+                            }
+                            }
+                        }
+                    }
+                }
+
+               .field-footer{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 30px;
+                padding-top: 20px;
+                .right{
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: #fff;
+                }
+               }
+
+               .profile-picfields{
+                width: 100%;
+                display: flex;
+                gap: 30px;
+               }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .profile-pic-info {
+        .profile-pic-info-row{
+            flex-direction: column;
+            gap: 50px;
+            .profile-pic-icon{
+                width: 100%;
+            }
+            .profile-pic-right{
+                width: 100%;
+                padding-right: 0px;
+                .otp-info-row{
+                    padding-top: 20px;
+                }
+                .profile-pic-row {
+                    .uesr-profile-pic-row{
+                        gap: 20px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
